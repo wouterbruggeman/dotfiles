@@ -1,1 +1,0 @@
-/home/wouter/Projects/Other/dotfiles/xinitrc
