@@ -1,0 +1,1 @@
+/home/wouter/Projects/Other/dotfiles/zshrc
