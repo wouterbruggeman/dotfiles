@@ -13,9 +13,13 @@ urxvt*color5: #708488
 urxvt*color6: #c9caec
 urxvt*color7: #f8fce8
 
-
+urxvt*color8: #000008
+urxvt*color9: #e57169
 urxvt*color10: #607b52
-urxvt*color12: #6090a5
+urxvt*color11: #f8fce8
+urxvt*color12: #688490
+urxvt*color13: #708488
 urxvt*color14: #6090a5
+urxvt*color15: #f8fce8
 
 urxvt*dynamicColors: on
