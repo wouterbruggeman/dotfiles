@@ -3,6 +3,6 @@ xrandr --auto
 
 xset -b
 
-feh --bg-fill ~/Images/bg.png --bg-fill ~/Images/bg.png &
+feh --bg-fill ~/Images/bg.png &
 compton -b &
 exec i3
