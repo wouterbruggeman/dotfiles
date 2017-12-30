@@ -3,12 +3,17 @@
 g logo f8fce8
 g indicators f8fce8
 g multimedia f8fce8
-g fkeys f8fce8
-g modifiers 809498
-g arrows 809498
-g numeric 585820
+g fkeys 708488
+g modifiers c9caec
+g arrows e57169
+g numeric 607b52
 g functions f8fce8
-g keys 585820
+g keys 607b52
 g gkeys f8fce8
+
+k H e57169
+k J e57169
+k K e57169
+k L e57169
 
 c

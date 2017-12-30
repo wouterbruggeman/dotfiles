@@ -3,3 +3,19 @@ urxvt*background: rgba:0000/0000/0200/c800
 urxvt*depth: 32
 urxvt*font: xft:DejaVu Sans Mono:style=book:pizelsize=12
 urxvt*scrollBar: false
+
+urxvt*color0: #000008
+urxvt*color1: #e57169
+urxvt*color2: #607b52
+urxvt*color3: #f8fce8
+urxvt*color4: #688490
+urxvt*color5: #708488
+urxvt*color6: #c9caec
+urxvt*color7: #f8fce8
+
+
+urxvt*color10: #607b52
+urxvt*color12: #6090a5
+urxvt*color14: #6090a5
+
+urxvt*dynamicColors: on
