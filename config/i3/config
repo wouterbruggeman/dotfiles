@@ -3,10 +3,10 @@
 set $mod Mod4
 
 # Workspace names
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -150,13 +150,24 @@ bar {
 
 
 # Other keybindings:
-bindcode 133 exec --no-startup-id "sh -c '~/.scripts/fixDisplaySetup.sh'"
+# Screenshots
+
+bindcode 107 exec --no-startup-id scrot ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
+bindcode $mod+107 exec --no-startup-id scrot -u ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
+# End screenshots
+
+# Usefull keybindings
 bindsym $mod+l exec --no-startup-id "sh -c '~/.scripts/lock.sh'"
+# End usefull keybindings
+
+# Function keys
+bindcode 133 exec --no-startup-id "sh -c '~/.scripts/fixDisplaySetup.sh'"
 bindsym XF86MonBrightnessUp exec --no-startup-id "sh -c 'sudo ~/.scripts/brightness.sh 1'"
 bindsym XF86MonBrightnessDown exec --no-startup-id "sh -c 'sudo ~/.scripts/brightness.sh 0'"
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+# End functionkeys
 # END other keybindings
 
 # GAPS:
