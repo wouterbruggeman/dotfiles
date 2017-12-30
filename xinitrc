@@ -1,6 +1,8 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
-feh --bg-fill ~/Images/bg.png &
+xset -b
+
+feh --bg-fill ~/Images/bg.png --bg-fill ~/Images/bg.png &
 compton -b &
 exec i3
