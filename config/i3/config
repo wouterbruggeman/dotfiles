@@ -137,11 +137,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        colors {
+                background #000808
+                separator #000808
+                statusline #f8fce8
+                focused_workspace #000808 #545454 #f8fce8
+                active_workspace #000808 #262626 #f8fce8
+                inactive_workspace #000808 #000808 #f8fce8
+                urgent_workspace #000808 #e57169 #f8fce8
+       }
 }
-
-
-#Program keybindings
-#End program keybindings
 
 
 # Other keybindings:
