@@ -7,6 +7,7 @@ set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
+set $ws5 "5: "
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -81,7 +82,7 @@ bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -93,7 +94,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -149,16 +150,12 @@ bar {
 }
 
 
-# Other keybindings:
 # Screenshots
-
 bindcode 107 exec --no-startup-id scrot ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
-bindcode $mod+107 exec --no-startup-id scrot -u ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
-# End screenshots
+#bindcode $mod+107 exec --no-startup-id scrot -u ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
 
-# Usefull keybindings
+# Lock keybindings
 bindsym $mod+l exec --no-startup-id "sh -c '~/.scripts/lock.sh'"
-# End usefull keybindings
 
 # Function keys
 bindcode 133 exec --no-startup-id "sh -c '~/.scripts/fixDisplaySetup.sh'"
@@ -167,8 +164,16 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "sh -c 'sudo ~/.scripts/brigh
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 5%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
-# End functionkeys
-# END other keybindings
+
+# Sound keybindings
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+
+# Workspace switching
+bindsym $mod+Tab workspace back_and_forth
+
 
 # GAPS:
 for_window [class=".*"] border pixel 0
