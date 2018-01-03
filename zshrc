@@ -3,10 +3,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 
-# Remove the Desktop directory which I'm not using, but keeps getting created.. THIS IS A TEMP FIX!
-rm -rf ~/Desktop
-
-
 export PROMPT='[%n@%m | %~]> '
 
 # Folder aliasses
