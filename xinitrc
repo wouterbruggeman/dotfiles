@@ -1,9 +1,14 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
+~/.scripts/fixMonitorSetup.sh &
+
 xset -b
+xset dpms 0 1800 3600 &
+xset s off &
+xautolock -time 5 -locker /home/wouter/.scripts/lock.sh & 
 
 g810-led -p ~/.config/g810-led/profile &
-feh --bg-fill ~/Images/bg.png &
-compton -b &
+feh --no-fehbg --bg-fill ~/Images/bg.png &
+compton &
 exec i3

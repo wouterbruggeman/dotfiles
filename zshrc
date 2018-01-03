@@ -7,7 +7,7 @@ unsetopt beep
 rm -rf ~/Desktop
 
 
-export PROMPT='[%n@%m | %/]> '
+export PROMPT='[%n@%m | %~]> '
 
 # Folder aliasses
 alias ls='ls --color=auto'
@@ -35,3 +35,4 @@ alias shutdown='systemctl poweroff'
 alias nettest='ping archlinux.org -c 5'
 alias sysinfo='screenfetch'
 alias screenshot='scrot ~/Images/screenshots/'
+alias vi='vim'
