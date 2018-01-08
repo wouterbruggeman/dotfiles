@@ -91,8 +91,8 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -149,8 +149,9 @@ bar {
 
 
 # Screenshots
+bindcode $mod+107 exec --no-startup-id scrot -u ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
 bindcode 107 exec --no-startup-id scrot ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
-#bindcode $mod+107 exec --no-startup-id scrot -u ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
+
 
 # Lock keybindings
 bindsym $mod+l exec --no-startup-id "sh -c '~/.scripts/lock.sh'"
