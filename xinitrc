@@ -1,8 +1,6 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
-~/.scripts/fixMonitorSetup.sh &
-
 xset -b
 xset dpms 0 1800 3600 &
 xset s off &

@@ -3,12 +3,18 @@ HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 
+export EDITOR='vim'
 export PROMPT='[%n@%m | %~]> '
 
 # Folder aliasses
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
+alias school='cd ~/Projects/School/'
+alias vakken='cd ~/Projects/School/Vakken/'
+alias project='cd ~/Projects/School/Bytegroep/Project2/'
+alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
+alias website='cd ~/Projects/School/PortfolioWebsite/'
 
 # Git aliasses:
 alias gs='git status'
