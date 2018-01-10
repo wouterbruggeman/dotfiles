@@ -1,13 +1,13 @@
 # Just a profile to use with the g810-led application
 
-g logo f8fce8
-g indicators f8fce8
-g multimedia f8fce8
-g fkeys 708488
+g logo ffffff
+g indicators ffffff
+g multimedia ffffff
+g fkeys ffffff
 g modifiers c9caec
 g arrows e57169
 g numeric 607b52
-g functions f8fce8
+g functions ffffff
 g keys 607b52
 g gkeys f8fce8
 
