@@ -1,6 +1,9 @@
 HISTFILE=~/.zsh_hist
-HISTSIZE=1000
+HISTSIZE=100000
 SAVEHIST=1000
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
 unsetopt beep
 
 export EDITOR='vim'
