@@ -29,6 +29,8 @@ alias jc='javac *.java'
 alias jr='java App'
 alias javad='mkdir docs && cd docs && javadoc ../*.java && cd ../'
 
+# Config aliasses
+alias zshrc='vim ~/.zshrc'
 
 # Other
 alias q='exit'
@@ -38,3 +40,5 @@ alias nettest='ping archlinux.org -c 5'
 alias sysinfo='screenfetch'
 alias screenshot='scrot ~/Images/screenshots/'
 alias vi='vim'
+alias calendar='cal -wy'
+

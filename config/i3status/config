@@ -43,8 +43,8 @@ battery all {
 	format_down = "No battery"
 	status_chr = ""
 	status_bat = ""
-	status_unk = ""
-	status_full = ""
+	status_unk = ""
+	status_full = ""
         format = "%status %percentage"
 	low_threshold = 25
 }
