@@ -12,6 +12,7 @@ export PROMPT='[%n@%m | %~]> '
 # Folder aliasses
 alias ls='ls --color=auto'
 alias la='ls -a'
+alias sl='ls'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
 alias vakken='cd ~/Projects/School/Vakken/'
