@@ -5,14 +5,20 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
 unsetopt beep
-
 export EDITOR='vim'
-export PROMPT='[%n@%m | %~]> '
+
+# Prompt settings
+autoload -Uz compinit promptinit
+compinit
+promptinit
+PROMPT='[%n@%m | %~]> '
+
 
 # Folder aliasses
 alias ls='ls --color=auto'
-alias la='ls -a'
+alias la='ls -al'
 alias sl='ls'
+alias al='la'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
 alias vakken='cd ~/Projects/School/Vakken/'
@@ -20,7 +26,7 @@ alias project='cd ~/Projects/School/Bytegroep/Project2/'
 alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
-# Git aliasses:
+# Git aliasses
 alias gs='git status'
 alias ga='git add *'
 alias gc='git commit -m'
@@ -32,6 +38,10 @@ alias g='gource -f -c 2'
 alias jc='javac *.java'
 alias jr='java App'
 alias javad='mkdir docs && cd docs && javadoc ../*.java && cd ../'
+
+# Arduino aliasses
+alias acu='pio run && pio run --target upload'
+alias asm='pio device monitor -b 9600'
 
 # Config aliasses
 alias zshrc='vim ~/.zshrc'
