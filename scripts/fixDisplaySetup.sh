@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 xrandrString="`xrandr | grep "HDMI-0 disconnected"`"
 

@@ -40,7 +40,7 @@ alias jr='java App'
 alias javad='mkdir docs && cd docs && javadoc ../*.java && cd ../'
 
 # Arduino aliasses
-alias acu='pio run && pio run --target upload'
+alias acu='pio run --target upload'
 alias asm='pio device monitor -b 9600'
 
 # Config aliasses
@@ -55,4 +55,5 @@ alias sysinfo='screenfetch'
 alias screenshot='scrot ~/Images/screenshots/'
 alias vi='vim'
 alias calendar='cal -wy'
-
+alias webcamtest='mpv /dev/video1'
+alias monitorFix='~/.scripts/fixDisplaySetup.sh'
