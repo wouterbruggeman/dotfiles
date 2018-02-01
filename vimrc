@@ -23,4 +23,6 @@ set lbr
 set tw=160
 set shiftwidth=8
 
+set visualbell
 
+highlight Normal ctermfg=white ctermbg=black

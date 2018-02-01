@@ -46,6 +46,10 @@ alias asm='pio device monitor -b 9600'
 # Config aliasses
 alias zshrc='vim ~/.zshrc'
 
+# Package manager aliasses
+alias install='sudo pacman -S '
+alias remove='sudo pacman -Rns '
+
 # Other
 alias q='exit'
 alias wifi='nmtui'

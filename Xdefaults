@@ -1,8 +1,9 @@
-urxvt*foreground: white
-urxvt*background: rgba:0000/0000/0200/c800
-urxvt*depth: 32
-urxvt*font: xft:DejaVu Sans Mono:style=book:pizelsize=12
-urxvt*scrollBar: false
+urxvt.foreground: white
+urxvt.background: rgba:0000/0000/0200/c800
+urxvt.depth: 32
+urxvt.font: xft:DejaVu Sans Mono:style=book:pizelsize=12
+urxvt.scrollBar: false
+urxvt.internalBorder: 0
 
 urxvt*color0: #000008
 urxvt*color1: #e57169
