@@ -171,10 +171,13 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
 
 # Window rules:
 for_window [class=".*"] border pixel 0
 for_window [class="feh"] border pixel 1 floating enable
+for_window [title="BankInterface"] border pixel 0 fullscreen
 
 # GAPS:
 gaps inner 10

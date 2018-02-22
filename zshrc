@@ -1,6 +1,5 @@
 HISTFILE=~/.zsh_hist
-HISTSIZE=100000
-SAVEHIST=1000
+HISTSIZE=100000 SAVEHIST=1000
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
@@ -22,7 +21,8 @@ alias al='la'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
 alias vakken='cd ~/Projects/School/Vakken/'
-alias project='cd ~/Projects/School/Bytegroep/Project2/'
+alias project='cd ~/Projects/School/Bytegroep/Project3/'
+alias projectcode='cd ~/Projects/School/Bytegroep/Project3/sourcecode/'
 alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
@@ -58,6 +58,17 @@ alias nettest='ping archlinux.org -c 5'
 alias sysinfo='screenfetch'
 alias screenshot='scrot ~/Images/screenshots/'
 alias vi='vim'
+alias v='vim'
 alias calendar='cal -wy'
-alias webcamtest='mpv /dev/video1'
+alias webcamtest='mpv /dev/video0'
 alias monitorFix='~/.scripts/fixDisplaySetup.sh'
+alias weather="curl -s 'http://wttr.in/Rotterdam'"
+
+raspberry() {
+	sudo systemctl start avahi-daemon.service
+	if ! ip a show enp0s20f0u2i1 | grep -q 'inet6'; then
+		sudo dhcpcd enp0s20f0u2i1
+	fi
+	ssh -6 root@$(avahi-resolve-host-name pi.local | awk '{ print $2 }')%enp0s20f0u2i1
+	sudo systemctl stop avahi-daemon.service
+}
