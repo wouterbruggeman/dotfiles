@@ -29,10 +29,10 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-#bindsym $mod+h focus left
-#bindsym $mod+j focus down
-#bindsym $mod+k focus up
-#bindsym $mod+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -45,7 +45,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -151,7 +151,7 @@ bindcode 107 exec --no-startup-id scrot ~/Images/screenshots/%d-%m-%Y-%T-screens
 #bindcode $mod+Mod1+107 exec scrot -s ~/Images/screenshots/%d-%m-%Y-%T-screenshot.png
 
 # Lockscreen
-bindsym $mod+l exec --no-startup-id "sh -c '~/.scripts/lock.sh'"
+bindsym $mod+i exec --no-startup-id "sh -c '~/.scripts/lock.sh'"
 
 # Function keys
 #bindcode 133 exec --no-startup-id "sh -c '~/.scripts/fixDisplaySetup.sh'"
@@ -175,9 +175,9 @@ bindsym $mod+Ctrl+Up move workspace to output up
 bindsym $mod+Ctrl+Down move workspace to output down
 
 # Window rules:
-for_window [class=".*"] border pixel 0
+hide_edge_borders both
+for_window [class=".*"] border pixel 2
 for_window [class="feh"] border pixel 1 floating enable
-for_window [title="BankInterface"] border pixel 0 fullscreen
 
 # GAPS:
 gaps inner 10

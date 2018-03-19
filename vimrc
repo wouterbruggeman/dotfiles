@@ -13,7 +13,7 @@ let g:lightline.subseparator =  {'left': "\ue0b1", 'right': "\ue0b3"}
 
 
 " Non plugin settings"
-set history=10
+set history=100
 set autoread
 
 " Search settings "
