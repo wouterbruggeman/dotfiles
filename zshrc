@@ -20,9 +20,9 @@ alias sl='ls'
 alias al='la'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
-alias vakken='cd ~/Projects/School/Vakken/'
-alias project='cd ~/Projects/School/Bytegroep/Project3/'
-alias projectcode='cd ~/Projects/School/Bytegroep/Project3/sourcecode/'
+alias vakken='cd ~/Projects/School/Vakken/periode4/'
+alias project='cd ~/Projects/School/Bytegroep/Project4/'
+alias projectcode='cd ~/Projects/School/Bytegroep/Project4/sourcecode/'
 alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
@@ -49,6 +49,7 @@ alias zshrc='vim ~/.zshrc'
 # Package manager aliasses
 alias install='sudo pacman -S '
 alias remove='sudo pacman -Rns '
+alias clean='sudo pacman -Rns $(pacman -Qtdq)'
 
 # Other
 alias q='exit'
@@ -64,11 +65,4 @@ alias webcamtest='mpv /dev/video0'
 alias monitorFix='~/.scripts/fixDisplaySetup.sh'
 alias weather="curl -s 'http://wttr.in/Rotterdam'"
 
-raspberry() {
-	sudo systemctl start avahi-daemon.service
-	if ! ip a show enp0s20f0u2i1 | grep -q 'inet6'; then
-		sudo dhcpcd enp0s20f0u2i1
-	fi
-	ssh -6 root@$(avahi-resolve-host-name pi.local | awk '{ print $2 }')%enp0s20f0u2i1
-	sudo systemctl stop avahi-daemon.service
-}
+alias rpi='screen -T linux /dev/ttyACM0'
