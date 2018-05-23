@@ -11,9 +11,9 @@
 
 general {
         colors = true
-        color_good = '#607b52'
-        color_degraded = '#f8fce8'
-        color_bad = '#e57169'
+        color_good = '#00b300'
+        color_degraded = '#c6ba26'
+        color_bad = '#ff4d4d'
         interval = 1
 }
 
