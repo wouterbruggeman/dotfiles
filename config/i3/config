@@ -184,5 +184,5 @@ for_window [class="feh"] border pixel 1 floating enable
 
 # GAPS:
 gaps inner 10
-gaps outer 1
+gaps outer 0
 smart_gaps on

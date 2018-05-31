@@ -5,22 +5,22 @@ urxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:hinti
 urxvt.scrollBar: false
 urxvt.internalBorder: 0
 
-urxvt*color0: #000008
-urxvt*color1: #e57169
-urxvt*color2: #607b52
-urxvt*color3: #f8fce8
-urxvt*color4: #688490
-urxvt*color5: #708488
-urxvt*color6: #c9caec
-urxvt*color7: #f8fce8
+urxvt*color0: #000000
+urxvt*color1: #ff4d4d
+urxvt*color2: #00b300
+urxvt*color3: #c6ba26
+urxvt*color4: #5959d6
+urxvt*color5: #34d1a4
+urxvt*color6: #1af2f2
+urxvt*color7: #f2f2f2
 
-urxvt*color8: #000008
-urxvt*color9: #e57169
-urxvt*color10: #607b52
-urxvt*color11: #f8fce8
-urxvt*color12: #688490
-urxvt*color13: #708488
-urxvt*color14: #6090a5
-urxvt*color15: #f8fce8
+urxvt*color8: #000000
+urxvt*color9: #ff4d4d
+urxvt*color10: #00b300
+urxvt*color11: #c6ba26
+urxvt*color12: #5959d6
+urxvt*color13: #34d1a4
+urxvt*color14: #1af2f2
+urxvt*color15: #f2f2f2
 
 urxvt*dynamicColors: on
