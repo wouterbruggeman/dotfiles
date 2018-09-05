@@ -11,7 +11,6 @@ let g:lightline = {}
 let g:lightline.separator    =  {'left': "\ue0b0", 'right': "\ue0b2"}
 let g:lightline.subseparator =  {'left': "\ue0b1", 'right': "\ue0b3"}
 
-
 " Non plugin settings"
 set history=100
 set autoread
@@ -36,10 +35,17 @@ set lbr
 set tw=160
 set shiftwidth=8
 set number 
+set mouse=a
+
 " highlight Normal ctermfg=grey ctermbg=black
-colorscheme torte
+colorscheme gummybears
 
+" Keybindings & Buffer settings "
+nnoremap <F2> :buffers<CR>:buffer<Space>
+nnoremap <F3> :b#<Enter>
+nnoremap <F4> :Explore<Enter>
 
+autocmd FileType c,cpp,ino,java,py,php,sh,tex autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " End plugin stuff "
 call vundle#end()

@@ -22,7 +22,6 @@ alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
 alias vakken='cd ~/Projects/School/Vakken/periode4/'
 alias project='cd ~/Projects/School/Bytegroep/Project4/'
-alias projectcode='cd ~/Projects/School/Bytegroep/Project4/sourcecode/'
 alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
@@ -45,11 +44,13 @@ alias asm='pio device monitor -b 9600'
 
 # Config aliasses
 alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
 
 # Package manager aliasses
 alias install='sudo pacman -S '
 alias remove='sudo pacman -Rns '
 alias clean='sudo pacman -Rns $(pacman -Qtdq)'
+alias update='sudo pacman -Syu && pacaur -Syu'
 
 # Other
 alias q='exit'

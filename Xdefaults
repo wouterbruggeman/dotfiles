@@ -10,8 +10,8 @@ urxvt*color1: #ff4d4d
 urxvt*color2: #00b300
 urxvt*color3: #c6ba26
 urxvt*color4: #5959d6
-urxvt*color5: #34d1a4
-urxvt*color6: #1af2f2
+urxvt*color5: #6600ff
+urxvt*color6: #0aa9a9
 urxvt*color7: #f2f2f2
 
 urxvt*color8: #000000
@@ -19,8 +19,8 @@ urxvt*color9: #ff4d4d
 urxvt*color10: #00b300
 urxvt*color11: #c6ba26
 urxvt*color12: #5959d6
-urxvt*color13: #34d1a4
-urxvt*color14: #1af2f2
+urxvt*color13: #6600ff
+urxvt*color14: #0aa9a9
 urxvt*color15: #f2f2f2
 
 urxvt*dynamicColors: on
