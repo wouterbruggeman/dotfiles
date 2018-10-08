@@ -134,16 +134,16 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        colors {
-                background #000808
-                separator #f8fce8
-                statusline #f8fce8
-                focused_workspace #000808 #545454 #f8fce8
-                active_workspace #000808 #262626 #f8fce8
-                inactive_workspace #000808 #000808 #f8fce8
-                urgent_workspace #000808 #e57169 #f8fce8
-       }
+  status_command i3status
+  colors {
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
 
 # Screenshots
@@ -186,3 +186,8 @@ for_window [class="feh"] border pixel 1 floating enable
 gaps inner 10
 gaps outer 0
 smart_gaps on
+
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
