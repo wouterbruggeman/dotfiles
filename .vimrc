@@ -11,6 +11,14 @@ let g:lightline = {}
 let g:lightline.separator    =  {'left': "\ue0b0", 'right': "\ue0b2"}
 let g:lightline.subseparator =  {'left': "\ue0b1", 'right': "\ue0b3"}
 
+" Vimtex plugin settings "
+Plugin 'lervag/vimtex'
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+
+" Nvim-R plugin settings "
+Plugin 'jalvesaq/nvim-r'
+
 " Non plugin settings"
 set history=100
 set autoread
@@ -44,9 +52,10 @@ colorscheme gummybears
 nnoremap <F2> :buffers<CR>:buffer<Space>
 nnoremap <F3> :b#<Enter>
 nnoremap <F4> :Explore<Enter>
+nnoremap <F5> :!make all<Enter>
 
 autocmd FileType c,cpp,ino,java,py,php,sh,tex autocmd BufWritePre <buffer> %s/\s\+$//e
 
-" End plugin stuff "
+" End Vundle "
 call vundle#end()
 filetype plugin indent on

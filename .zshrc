@@ -13,22 +13,23 @@ promptinit
 PROMPT='[%n@%m | %~]> '
 
 
-# Folder aliasses
-alias ls='ls --color=auto'
+# Folder aliasses alias 
+alias ls='ls --color=auto' 
 alias la='ls -al'
 alias sl='ls'
 alias al='la'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
-alias vakken='cd ~/Projects/School/Vakken/periode4/'
-alias project='cd ~/Projects/School/Bytegroep/Project4/'
-alias pwebsite='cd ~/Projects/School/Bytegroep/website/'
+alias vakken='cd ~/Projects/School/Vakken/periode5/'
+alias project='cd ~/Projects/School/archgarden/bladmuziek'
+alias pwebsite='cd ~/Projects/School/archgarden/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
 # Git aliasses
 alias gs='git status'
 alias ga='git add *'
 alias gc='git commit -m'
+alias gd='git diff'
 alias gps='git push'
 alias gpl='git pull'
 alias g='gource -f -c 2'
@@ -37,6 +38,9 @@ alias g='gource -f -c 2'
 alias jc='javac *.java'
 alias jr='java App'
 alias javad='mkdir docs && cd docs && javadoc ../*.java && cd ../'
+
+#R aliasses
+alias runr='clear && R CMD BATCH main.R && cat main.Rout'
 
 # Arduino aliasses
 alias acu='pio run --target upload'
@@ -47,10 +51,10 @@ alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
 # Package manager aliasses
-alias install='sudo pacman -S '
-alias remove='sudo pacman -Rns '
-alias clean='sudo pacman -Rns $(pacman -Qtdq)'
-alias update='sudo pacman -Syu && pacaur -Syu'
+alias install='trizen -S '
+alias remove='trizen -Rns '
+alias clean='trizen -Rns $(trizen -Qtdq)'
+alias update='sudo pacman -Syu'
 
 # Other
 alias q='exit'
@@ -59,11 +63,10 @@ alias shutdown='systemctl poweroff'
 alias nettest='ping archlinux.org -c 5'
 alias sysinfo='screenfetch'
 alias screenshot='scrot ~/Images/screenshots/'
-alias vi='vim'
-alias v='vim'
+alias vim='nvim'
+alias vi='nvim'
 alias calendar='cal -wy'
 alias webcamtest='mpv /dev/video0'
 alias monitorFix='~/.scripts/fixDisplaySetup.sh'
 alias weather="curl -s 'http://wttr.in/Rotterdam'"
-
 alias rpi='screen -T linux /dev/ttyACM0'
