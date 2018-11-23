@@ -3,7 +3,7 @@
 GRUB_DEFAULT=saved
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=1"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=1 acpi=osi\"!Windows 2015\""
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
