@@ -45,12 +45,12 @@ battery all {
 	status_bat = ""
 	status_unk = ""
 	status_full = ""
-        format = "%status %percentage"
+        format = "%status %percentage / %remaining"
 	low_threshold = 25
 }
 
 tztime local {
-        format = " %d-%m-%Y %H:%M:%S"
+        format = " %d-%m-%Y %H:%M:%S "
 }
 
 volume master {
