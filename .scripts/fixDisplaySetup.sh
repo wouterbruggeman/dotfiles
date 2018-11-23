@@ -5,7 +5,7 @@ pkill intel-virtual-o
 # Start intel-virtual-output
 intel-virtual-output
 
-#Check if there is an monitor connected
+# Check if there is a monitor connected
 xrandrString="`xrandr | grep "VIRTUAL1 disconnected"`"
 if [ "${xrandrString}" == "" ]; then
 	# There is an external display connected
