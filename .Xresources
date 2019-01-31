@@ -8,7 +8,7 @@
 *.color8:       #38252c
 
 ! red
-*.color1:       #d81765
+*.color1:       #ff0000
 *.color9:       #ff0000
 
 ! green
@@ -24,8 +24,8 @@
 *.color12:      #289cd5
 
 ! magenta
-*.color5:       #ff2491
-*.color13:      #ff2491
+*.color5:       #ff5454
+*.color13:      #ff2e2e
 
 ! cyan
 *.color6:       #0fdcb6
@@ -34,7 +34,6 @@
 ! white
 *.color7:       #ebebeb
 *.color15:      #f8f8f8
-
 
 ! urxvt settings
 urxvt*dynamicColors: on

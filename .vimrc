@@ -47,6 +47,8 @@ set mouse=a
 
 " highlight Normal ctermfg=grey ctermbg=black
 colorscheme gummybears
+"colorscheme default
+"highlight Normal ctermfg=15 ctermbg=0
 
 " Keybindings & Buffer settings "
 nnoremap <F2> :buffers<CR>:buffer<Space>
