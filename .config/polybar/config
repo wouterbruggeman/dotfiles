@@ -201,10 +201,9 @@ type = internal/network
 interface = eno1
 interval = 3.0
 
+label-connected =  %local_ip%
 format-connected-underline = #55aa55
-format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -222,11 +221,10 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label =  %date% %time%
 
 [module/alsa]
 type = internal/alsa
@@ -265,7 +263,8 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging> <label-charging>  
+format-charging-prefix = " "
 format-charging-underline = #ffb52a
 
 format-discharging = <animation-discharging> <label-discharging>

@@ -1,5 +1,9 @@
 HISTFILE=~/.zsh_hist
 HISTSIZE=100000 SAVEHIST=1000
+
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH
+
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
@@ -15,12 +19,12 @@ PROMPT='[%n@%m | %~]> '
 
 # Folder aliasses alias 
 alias ls='ls --color=auto' 
-alias la='ls -al'
+alias la='ls -l'
 alias sl='ls'
 alias al='la'
 alias dotfiles='cd ~/Projects/Other/dotfiles/'
 alias school='cd ~/Projects/School/'
-alias vakken='cd ~/Projects/School/Vakken/periode5/'
+alias vakken='cd ~/Projects/School/Vakken/periode6/'
 alias project='cd ~/Projects/School/archgarden/bladmuziek'
 alias pwebsite='cd ~/Projects/School/archgarden/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
@@ -61,7 +65,7 @@ alias q='exit'
 alias wifi='nmtui'
 alias shutdown='systemctl poweroff'
 alias nettest='ping archlinux.org -c 5'
-alias sysinfo='screenfetch'
+alias sysinfo='neofetch'
 alias screenshot='scrot ~/Images/screenshots/'
 alias vim='nvim'
 alias vi='nvim'
@@ -70,3 +74,10 @@ alias webcamtest='mpv /dev/video0'
 alias monitorFix='~/.scripts/fixDisplaySetup.sh'
 alias weather="curl -s 'http://wttr.in/Rotterdam'"
 alias rpi='screen -T linux /dev/ttyACM0'
+
+#Python course
+alias vymthon='python ~/Projects/School/vymthon/src/vymthon.py'
+alias vym=vymthon
+
+#Auto start the x server on tty1
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
