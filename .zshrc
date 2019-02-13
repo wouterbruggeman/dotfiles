@@ -29,6 +29,10 @@ alias project='cd ~/Projects/School/archgarden/bladmuziek'
 alias pwebsite='cd ~/Projects/School/archgarden/website/'
 alias website='cd ~/Projects/School/PortfolioWebsite/'
 
+#Python course
+alias vymthon='python ~/Projects/School/vymthon/src/vymthon.py'
+alias vym=vymthon
+
 # Git aliasses
 alias gs='git status'
 alias ga='git add *'
@@ -60,6 +64,11 @@ alias remove='trizen -Rns '
 alias clean='trizen -Rns $(trizen -Qtdq)'
 alias update='sudo pacman -Syu'
 
+#Vim stuff
+alias vim='nvim'
+alias vi='vim'
+alias nano='vim'
+
 # Other
 alias q='exit'
 alias wifi='nmtui'
@@ -67,17 +76,14 @@ alias shutdown='systemctl poweroff'
 alias nettest='ping archlinux.org -c 5'
 alias sysinfo='neofetch'
 alias screenshot='scrot ~/Images/screenshots/'
-alias vim='nvim'
-alias vi='nvim'
 alias calendar='cal -wy'
 alias webcamtest='mpv /dev/video0'
 alias monitorFix='~/.scripts/fixDisplaySetup.sh'
 alias weather="curl -s 'http://wttr.in/Rotterdam'"
 alias rpi='screen -T linux /dev/ttyACM0'
 
-#Python course
-alias vymthon='python ~/Projects/School/vymthon/src/vymthon.py'
-alias vym=vymthon
+alias bton='bluetoothctl -- power on'
+alias btoff='bluetoothctl -- power off'
 
 #Auto start the x server on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
