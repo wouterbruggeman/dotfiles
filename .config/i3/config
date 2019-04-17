@@ -161,7 +161,7 @@ bindsym $mod+Ctrl+Down move workspace to output down
 
 # Other keybindings
 bindsym $mod+o exec firefox
-bindsym $mod+p exec --no-startup-id "sh -c '~/.scripts/fixDisplaySetup.sh'"
+bindsym $mod+p exec --no-startup-id "sh -c '~/.scripts/setHomeScreensLayout.sh'"
 
 # Window rules:
 hide_edge_borders both
