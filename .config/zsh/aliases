@@ -10,6 +10,7 @@ alias la="ls -al"
 #Git
 alias gs="git status"
 alias gc="git commit -m"
+alias ga="git add *"
 alias gps="git push"
 alias gpl="git pull"
 
