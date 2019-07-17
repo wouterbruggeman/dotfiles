@@ -1,0 +1,64 @@
+" Paths
+set packpath^=$XDG_CONFIG_HOME/vim
+set rtp^=$XDG_CONFIG_HOME/vim
+set viminfo+=n$XDG_CACHE_HOME/vim/vim_info
+
+" Search settings "
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Colors
+highlight Normal ctermbg=black
+
+" Indentation
+set autoindent
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
+
+" Code settings "
+syntax enable
+set number 
+set ai
+set wrap
+set lbr
+set tw=160
+set shiftwidth=8
+set mouse=a
+
+" Keybindings
+nnoremap <F2> :buffers<CR>:buffer<Space>
+nnoremap <F3> :b#<Enter>
+nnoremap <F4> :Explore<Enter>
+
+" Clipboard etc
+set clipboard=unnamedplus
+
+" Spell checkerset spelllang=en_us,nl
+set spelllang=en_us,nl
+
+" Explorer settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+
+" Plugin Manager
+call plug#begin('$XDG_CONFIG_HOME/vim/plugins')
+
+" Plugins
+Plug 'itchyny/lightline.vim'
+Plug 'lervag/vimtex'
+
+" Start the plugin manager
+call plug#end()
+
+" Lightline settings
+set laststatus=2
+set noshowmode
+let g:lightline = {}
+
+" Vimtex plugin
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'

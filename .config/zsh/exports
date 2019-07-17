@@ -1,0 +1,31 @@
+export EDITOR="/usr/bin/vim"
+
+# Directories
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# Files
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export PLATFORMIO_HOME_DIR="$XDG_DATA_HOME/platformio"
+
+# Vim
+export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
+
+# Xorg
+export XINITRC="$XDG_CONFIG_HOME/xorg/xinitrc"
+
+# Less
+export LESSHISTFILE="/dev/null"
+
+# Nvidia
+export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/gl_shaders"
+
+# Term
+export TERM=xterm-256color
+
+# Pass
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export PASSWORD_STORE_GENERATED_LENGTH="15"
+export PASSWORD_STORE_CLIP_TIME="20"

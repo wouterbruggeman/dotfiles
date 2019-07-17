@@ -1,0 +1,20 @@
+#Package manager
+alias install='trizen -S '
+alias update='trizen -Syu '
+alias remove='trizen -Rns '
+
+#Ls
+alias ls="ls --color=always"
+alias la="ls -al"
+
+#Git
+alias gs="git status"
+alias gc="git commit -m"
+alias gps="git push"
+alias gpl="git pull"
+
+#Pass
+alias passcopy="pass -c"
+
+#Misc
+alias q="exit"
