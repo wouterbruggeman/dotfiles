@@ -33,6 +33,7 @@ cp /etc/fstab $DOT_DIR/etc/fstab
 cp /etc/iptables/iptables.rules $DOT_DIR/etc/iptables/iptables.rules
 cp -r /etc/modprobe.d $DOT_DIR/etc/
 cp -r /etc/X11/xorg.conf.d $DOT_DIR/etc/
+cp /etc/systemd/logind.conf $DOT_DIR/etc/systemd/logind.conf
 
 #Copy all background images to the dotfiles directory
 cp -r /home/wouter/media/backgrounds $DOT_DIR/media
