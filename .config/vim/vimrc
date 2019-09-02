@@ -11,6 +11,7 @@ set incsearch
 
 " Colors
 highlight Normal ctermbg=black
+highlight Constant ctermfg=3
 
 " Indentation
 set autoindent

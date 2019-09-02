@@ -11,6 +11,7 @@ alias la="ls -al"
 alias gs="git status"
 alias gc="git commit -m"
 alias ga="git add *"
+alias gd="git diff"
 alias gps="git push"
 alias gpl="git pull"
 
@@ -19,3 +20,6 @@ alias passcopy="pass -c"
 
 #Misc
 alias q="exit"
+
+alias dotfiles="cd ~/projects/private/dotfiles/"
+alias wifi="sudo wifi-menu"
