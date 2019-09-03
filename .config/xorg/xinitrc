@@ -16,5 +16,8 @@ compton -c -C -b
 #Show polybar
 exec polybar main &
 
+#Remove the cursor when not in use
+exec unclutter &
+
 #Start i3
 exec i3

@@ -227,6 +227,23 @@ mode "$mode_monitor"{
 	bindsym Escape mode "default"
 }
 
+#--------------------Media Mode--------------------
+bindsym $mod+m mode "$mode_media"
+
+set $mode_media (H) Previous, (J) Volume down, (K) Volume up, (L) Next, (P) Play-Pause, (M) Togggle mute 
+mode "$mode_media"{
+	bindsym h exec --no-startup-id playerctl previous
+	bindsym j exec amixer set Master 1%-
+	bindsym k exec amixer set Master 1%+
+	bindsym l exec --no-startup-id playerctl next
+	bindsym p exec --no-startup-id playerctl play-pause
+	bindsym m exec --no-startup-id "sh -c '~/.scripts/sound/toggleMute.sh'"
+
+	# Back to normal
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
 #--------------------UNUSED--------------------
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
