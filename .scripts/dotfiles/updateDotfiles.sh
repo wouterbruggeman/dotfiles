@@ -5,7 +5,6 @@ DOT_DIR="/home/wouter/projects/private/dotfiles"
 #Copy all dotfiles to the right directory in the dotfiles repo folder
 cp ~/.zshrc $DOT_DIR/.zshrc
 cp $XDG_CONFIG_HOME/user-dirs.dirs $DOT_DIR/.config/
-cp -r $XDG_CONFIG_HOME/zsh $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/xorg $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/polybar $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/i3 $DOT_DIR/.config/
@@ -16,6 +15,11 @@ cp -r $XDG_CONFIG_HOME/compton $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/htop $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/neofetch $DOT_DIR/.config/
 cp $XDG_CONFIG_HOME/vim/vimrc $DOT_DIR/.config/vim/vimrc
+
+#Copy zsh files but remove the work file
+cp -r $XDG_CONFIG_HOME/zsh $DOT_DIR/.config/
+rm $DOT_DIR/.config/zsh/work
+touch $DOT_DIR/.config/zsh/work
 
 #Copy all scripts to the right directory
 cp -r ~/.scripts $DOT_DIR/

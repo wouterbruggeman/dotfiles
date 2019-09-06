@@ -4,6 +4,9 @@ xautolock -locker ~/.scripts/lock.sh -time 10 -detectsleep &
 #Enable numlock
 numlockx &
 
+#Remove the cursor when not in use
+exec unclutter -b &
+
 #Setup XRDB
 xrdb $XDG_CONFIG_HOME/xorg/Xresources
 
@@ -15,9 +18,6 @@ compton -c -C -b
 
 #Show polybar
 exec polybar main &
-
-#Remove the cursor when not in use
-exec unclutter &
 
 #Start i3
 exec i3
