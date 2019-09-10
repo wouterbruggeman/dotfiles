@@ -16,7 +16,7 @@ cp -r $XDG_CONFIG_HOME/htop $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/neofetch $DOT_DIR/.config/
 cp $XDG_CONFIG_HOME/vim/vimrc $DOT_DIR/.config/vim/vimrc
 
-#Copy zsh files but remove the work file
+#Copy zsh files but add an empty placeholder file for the work related stuff 
 cp -r $XDG_CONFIG_HOME/zsh $DOT_DIR/.config/
 rm $DOT_DIR/.config/zsh/work
 touch $DOT_DIR/.config/zsh/work

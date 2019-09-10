@@ -18,8 +18,15 @@ alias gpl="git pull"
 #Pass
 alias passcopy="pass -c"
 
-#Misc
-alias q="exit"
+#Platformio
+alias pupload='pio run -t upload'
+alias pmonitor='sudo pio device monitor'
 
-alias dotfiles="cd ~/projects/private/dotfiles/"
-alias wifi="sudo wifi-menu"
+#Misc
+alias q='exit'
+
+alias dotfiles='cd ~/projects/private/dotfiles/'
+alias wifi='sudo wifi-menu'
+
+alias mountusb='mount /dev/sdb'
+alias unmountusb='umount /dev/sdb'

@@ -19,5 +19,8 @@ compton -c -C -b
 #Show polybar
 exec polybar main &
 
+#Attempt to connect to all bluetooth devices 
+exec ~/.scripts/bluetooth.sh &
+
 #Start i3
 exec i3
