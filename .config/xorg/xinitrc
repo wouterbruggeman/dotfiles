@@ -1,14 +1,14 @@
+#Setup XRDB
+xrdb $XDG_CONFIG_HOME/xorg/Xresources
+
+#Attempt to connect to all bluetooth devices 
+exec ~/.scripts/bluetooth.sh &
+
 #Start xautolock
 xautolock -locker ~/.scripts/lock.sh -time 10 -detectsleep &
 
 #Enable numlock
 numlockx &
-
-#Remove the cursor when not in use
-exec unclutter -b &
-
-#Setup XRDB
-xrdb $XDG_CONFIG_HOME/xorg/Xresources
 
 #Show a background
 exec ~/.scripts/background.sh &
@@ -18,9 +18,6 @@ compton -c -C -b
 
 #Show polybar
 exec polybar main &
-
-#Attempt to connect to all bluetooth devices 
-exec ~/.scripts/bluetooth.sh &
 
 #Start i3
 exec i3

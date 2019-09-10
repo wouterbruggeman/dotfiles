@@ -213,14 +213,14 @@ mode "$mode_system"{
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
-#--------------------MONITOR MODE--------------------
-bindsym $mod+p mode "$mode_monitor"
+#--------------------PROFILE MODE--------------------
+bindsym $mod+p mode "$mode_profile"
 
-set $mode_monitor (1) Laptop, (2) Home (3) Work
-mode "$mode_monitor"{
-	bindsym 1 exec --no-startup-id "sh -c '~/.scripts/setMonitor.sh laptop'", mode "default"
-	bindsym 2 exec --no-startup-id "sh -c '~/.scripts/setMonitor.sh home'", mode "default"
-	bindsym 3 exec --no-startup-id "sh -c '~/.scripts/setMonitor.sh work'", mode "default"
+set $mode_profile (1) Laptop, (2) Home (3) Work
+mode "$mode_profile"{
+	bindsym 1 exec --no-startup-id "sh -c '~/.scripts/setProfile.sh laptop'", mode "default"
+	bindsym 2 exec --no-startup-id "sh -c '~/.scripts/setProfile.sh home'", mode "default"
+	bindsym 3 exec --no-startup-id "sh -c '~/.scripts/setProfile.sh work'", mode "default"
 
 	# Back to normal
 	bindsym Return mode "default"

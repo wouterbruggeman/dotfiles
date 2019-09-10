@@ -8,5 +8,5 @@ else
 	optirun intel-virtual-output
 fi
 
-# Start the monitor script
-sh ~/.scripts/monitors/$1.sh
+# Start the profile script
+sh ~/.scripts/profiles/$1.sh

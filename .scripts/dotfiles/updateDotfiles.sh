@@ -40,6 +40,6 @@ cp -r /etc/X11/xorg.conf.d $DOT_DIR/etc/
 cp /etc/systemd/logind.conf $DOT_DIR/etc/systemd/logind.conf
 
 #Copy all background images to the dotfiles directory
-cp -r /home/wouter/media/backgrounds $DOT_DIR/media
+cp -r /home/wouter/media/backgrounds/private $DOT_DIR/media/backgrounds/private
 
 echo "Done!"
