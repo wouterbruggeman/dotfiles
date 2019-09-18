@@ -10,3 +10,6 @@ fi
 
 # Start the profile script
 sh ~/.scripts/profiles/$1.sh
+
+#Pick a random background
+sh -c "~/.scripts/background.sh"
