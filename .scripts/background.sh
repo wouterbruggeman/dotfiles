@@ -10,7 +10,6 @@ fi
 
 #Set the background theme
 BG_FOLDER="$HOME/media/backgrounds/$THEME/"
-echo $BG_FOLDER
 
 #Set a random image as background
 ls $BG_FOLDER | sort -R | tail -n 1 | while read file; do

@@ -22,6 +22,10 @@ alias passcopy="pass -c"
 alias pupload='pio run -t upload'
 alias pmonitor='sudo pio device monitor'
 
+#School
+alias stage='cd ~/projects/school/stage'
+alias stagelog='vim ~/projects/school/stage/log/files/`date -dlast-monday +%d-%m-%Y`'
+
 #Misc
 alias q='exit'
 
