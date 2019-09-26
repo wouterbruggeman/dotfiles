@@ -13,6 +13,9 @@ numlockx &
 #Show a background
 exec ~/.scripts/background.sh &
 
+#Set a default volume level
+amixer set Master 20%
+
 #Start compton
 compton -c -C -b
 
