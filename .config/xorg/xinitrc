@@ -17,7 +17,7 @@ exec ~/.scripts/background.sh &
 amixer set Master 20%
 
 #Set the default profile
-echo "laptop" > $XDG_CACHE_HOME/dotfiles/profile
+$(~/.scripts/profiles/laptop.sh)
 
 #Start compton
 compton -c -C -b

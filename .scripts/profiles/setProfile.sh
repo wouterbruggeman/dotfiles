@@ -11,11 +11,7 @@ else
 fi
 
 # Start the profile script
-sh ~/.scripts/profiles/$PROFILE.sh
+$(~/.scripts/profiles/$PROFILE.sh)
 
 # Pick a random background
-sh -c "~/.scripts/background.sh"
-
-# Write the current selected profile to a file
-#mkdir $XDG_CACHE_HOME/dotfiles/
-echo $PROFILE > $XDG_CACHE_HOME/dotfiles/profile
+$(~/.scripts/background.sh)

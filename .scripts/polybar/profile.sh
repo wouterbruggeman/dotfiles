@@ -1,11 +1,11 @@
 #!/bin/sh
 
-PROFILE=$(cat $XDG_CACHE_HOME/dotfiles/profile)
+PROFILE_NAME=$(sed '1q;d' $XDG_CACHE_HOME/dotfiles/profile)
 
-if [[ $PROFILE == 'laptop' ]]; then
+if [[ $PROFILE_NAME == 'laptop' ]]; then
 	echo ""
-elif [[ $PROFILE == 'home' ]]; then
+elif [[ $PROFILE_NAME == 'home' ]]; then
 	echo ""
-elif [[ $PROFILE == 'work' ]]; then
+elif [[ $PROFILE_NAME == 'work' ]]; then
 	echo ""
 fi
