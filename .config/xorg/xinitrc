@@ -16,6 +16,9 @@ exec ~/.scripts/background.sh &
 #Set a default volume level
 amixer set Master 20%
 
+#Set the default profile
+echo "laptop" > $XDG_CACHE_HOME/dotfiles/profile
+
 #Start compton
 compton -c -C -b
 

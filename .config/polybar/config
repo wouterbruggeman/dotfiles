@@ -42,7 +42,7 @@ font-3 = "Font Awesome 5 Free Regular:style=Regular:size=10;0"
 
 modules-left = i3
 modules-center = date
-modules-right = music xbacklight alsa cpu memory wlan eth temperature battery
+modules-right = music xbacklight alsa profile cpu memory wlan eth temperature battery
 
 tray-position = right
 tray-padding = 2
@@ -120,6 +120,15 @@ interval = 5
 format = <label>
 label =  %output:0:50:...%
 label-underline = ${xrdb:color1}
+
+[module/profile]
+type = custom/script
+exec = ~/.scripts/polybar/profile.sh
+interval = 5
+
+format = <label>
+label = %output%
+label-underline = ${xrdb:color3}
 
 [module/xbacklight]
 type = internal/xbacklight
