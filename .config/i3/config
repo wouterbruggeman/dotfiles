@@ -220,7 +220,7 @@ set $mode_profile (1) Laptop, (2) Home (3) Work
 mode "$mode_profile"{
 	bindsym 1 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh laptop'", mode "default"
 	bindsym 2 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh home'", mode "default"
-	bindsym 3 exec --no-startup-id "sh -c '~/.scripts/profileis/setProfile.sh work'", mode "default"
+	bindsym 3 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh work'", mode "default"
 
 	# Back to normal
 	bindsym Return mode "default"
