@@ -34,3 +34,5 @@ alias wifi='sudo wifi-menu'
 
 alias mountusb='mount /dev/sdb'
 alias unmountusb='umount /dev/sdb'
+
+alias please='sudo'

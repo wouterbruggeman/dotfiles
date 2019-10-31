@@ -14,5 +14,8 @@ UUID=6CDD-5D8A      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,cod
 # /dev/nvme0n1p5
 UUID=0f65240b-df4d-4913-a049-e4e168d80147	none      	swap      	defaults  	0 0
 
-# /dev/sdb
+# /dev/sdb -- USB
 /dev/sdb /mnt/usb auto user,umask=000,utf8,noauto 0 0
+
+# /dev/mmcblk0 -- SDcard 
+/dev/mmcblk0p1 /mnt/sd vfat user,uid=1000,gid=1000,umask=000,utf8,noauto 0 0
