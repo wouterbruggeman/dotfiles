@@ -2,55 +2,7 @@
    "border":"normal",
    "floating":"auto_off",
    "layout":"splitv",
-   "percent":0.7,
-   "type":"con",
-   "nodes":[
-      {
-         "border":"pixel",
-         "current_border_width":2,
-         "floating":"auto_off",
-         "geometry":{
-            "height":408,
-            "width":720,
-            "x":0,
-            "y":0
-         },
-         "name":"vim-container",
-         "percent":0.9,
-         "swallows":[
-            {
-               "class":"^URxvt$",
-               "instance":"vim-container"
-            }
-         ],
-         "type":"con"
-      },
-      {
-         "border":"pixel",
-         "current_border_width":2,
-         "floating":"auto_off",
-         "geometry":{
-            "height":408,
-            "width":720,
-            "x":0,
-            "y":0
-         },
-         "name":"0-container",
-         "percent":0.1,
-         "swallows":[
-            {
-               "class":"^URxvt$",
-               "instance":"small-terminal-container"
-            }
-         ],
-         "type":"con"
-      }
-   ]
-}{
-   "border":"normal",
-   "floating":"auto_off",
-   "layout":"splitv",
-   "percent":0.3,
+   "percent":0.25,
    "type":"con",
    "nodes":[
       {
@@ -89,6 +41,54 @@
             {
                "class":"^URxvt$",
                "instance":"medium-terminal-container"
+            }
+         ],
+         "type":"con"
+      }
+   ]
+}{
+   "border":"normal",
+   "floating":"auto_off",
+   "layout":"splitv",
+   "percent":0.75,
+   "type":"con",
+   "nodes":[
+      {
+         "border":"pixel",
+         "current_border_width":2,
+         "floating":"auto_off",
+         "geometry":{
+            "height":408,
+            "width":720,
+            "x":0,
+            "y":0
+         },
+         "name":"vim-container",
+         "percent":0.9,
+         "swallows":[
+            {
+               "class":"^URxvt$",
+               "instance":"vim-container"
+            }
+         ],
+         "type":"con"
+      },
+      {
+         "border":"pixel",
+         "current_border_width":2,
+         "floating":"auto_off",
+         "geometry":{
+            "height":408,
+            "width":720,
+            "x":0,
+            "y":0
+         },
+         "name":"0-container",
+         "percent":0.1,
+         "swallows":[
+            {
+               "class":"^URxvt$",
+               "instance":"small-terminal-container"
             }
          ],
          "type":"con"
