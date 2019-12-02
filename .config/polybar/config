@@ -118,7 +118,7 @@ exec = ~/.scripts/polybar/music.sh
 interval = 5
 
 format = <label>
-label =  %output:0:50:...%
+label =  %output:0:45:...%
 label-underline = ${xrdb:color1}
 
 [module/profile]

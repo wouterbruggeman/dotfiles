@@ -1,6 +1,5 @@
 source ~/.config/zsh/exports
 source $XDG_CONFIG_HOME/zsh/aliases
-
 source $XDG_CONFIG_HOME/zsh/work
 
 HISTFILE=$XDG_CACHE_HOME/zsh/hist

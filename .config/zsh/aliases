@@ -20,7 +20,11 @@ alias passcopy="pass -c"
 
 #Platformio
 alias pupload='pio run -t upload'
-alias pmonitor='sudo pio device monitor'
+alias pmonitor='pio device monitor'
+
+#Vim
+alias vopen='vim --servername DEFAULT --remote-silent'
+alias editor='f(){~/.scripts/i3/editor/editor.sh $@; unset -f f; exit}; f'
 
 #School
 alias stage='cd ~/projects/school/stage'
@@ -36,3 +40,4 @@ alias mountusb='mount /dev/sdb'
 alias unmountusb='umount /dev/sdb'
 
 alias please='sudo'
+alias weather="curl 'wttr.in/Rotterdam?u'"

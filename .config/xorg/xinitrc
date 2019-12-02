@@ -1,8 +1,17 @@
 #Setup XRDB
 xrdb $XDG_CONFIG_HOME/xorg/Xresources
 
-#Attempt to connect to all bluetooth devices 
-exec ~/.scripts/bluetooth.sh &
+#Show a background
+exec ~/.scripts/background.sh &
+
+#Set a default volume level
+amixer set Master 20%
+
+#Start picom 
+picom -c -b
+
+#Show polybar
+exec polybar main &
 
 #Start xautolock
 xautolock -locker ~/.scripts/lock.sh -time 10 -detectsleep &
@@ -10,20 +19,11 @@ xautolock -locker ~/.scripts/lock.sh -time 10 -detectsleep &
 #Enable numlock
 numlockx &
 
-#Show a background
-exec ~/.scripts/background.sh &
-
-#Set a default volume level
-amixer set Master 20%
+#Attempt to connect to all bluetooth devices 
+exec ~/.scripts/bluetooth.sh &
 
 #Set the default profile
-$(~/.scripts/profiles/laptop.sh)
-
-#Start compton
-compton -c -C -b
-
-#Show polybar
-exec polybar main &
+exec ~/.scripts/profiles/laptop.sh &
 
 #Start i3
 exec i3

@@ -1,9 +1,9 @@
-" Paths
+" Paths 
 set packpath^=$XDG_CONFIG_HOME/vim
 set rtp^=$XDG_CONFIG_HOME/vim
 set viminfo+=n$XDG_CACHE_HOME/vim/vim_info
 
-" Search settings "
+" Search settings
 set ignorecase
 set smartcase
 set hlsearch
@@ -19,7 +19,7 @@ set shiftwidth=8
 set softtabstop=8
 set tabstop=8
 
-" Code settings "
+" Code settings
 syntax enable
 set number 
 set ai
@@ -44,6 +44,12 @@ set spelllang=en_us,nl
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+
+" Autosave
+autocmd FocusLost * :wa
+
+" Remove search highlight
+nnoremap <leader><space> :nohlsearch<CR> 
 
 " Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/vim/plugins')

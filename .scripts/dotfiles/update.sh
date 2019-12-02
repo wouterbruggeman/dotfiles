@@ -11,10 +11,11 @@ cp -r $XDG_CONFIG_HOME/i3 $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/g810-led $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/gtk-2.0 $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/gtk-3.0 $DOT_DIR/.config/
-cp -r $XDG_CONFIG_HOME/compton $DOT_DIR/.config/
+cp -r $XDG_CONFIG_HOME/picom $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/htop $DOT_DIR/.config/
 cp -r $XDG_CONFIG_HOME/neofetch $DOT_DIR/.config/
 cp $XDG_CONFIG_HOME/vim/vimrc $DOT_DIR/.config/vim/vimrc
+cp -r $XDG_CONFIG_HOME/ranger $DOT_DIR/.config/ranger
 
 #Copy zsh files but add an empty placeholder file for the work related stuff 
 cp -r $XDG_CONFIG_HOME/zsh $DOT_DIR/.config/

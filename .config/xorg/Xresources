@@ -36,39 +36,39 @@
 *.color15:      #e2e2e2
 
 ! Font
-urxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
 
 ! Secondary screen (like less) settings
-urxvt.secondaryScreen: 1
-urxvt.secondaryScroll: 0
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
 
 ! Do not scroll with output
-urxvt*scrollTtyOutput: false
+URxvt*scrollTtyOutput: false
 
 ! Scroll in relation to buffer
-urxvt*scrollWithBuffer: true
+URxvt*scrollWithBuffer: true
 
 ! Scroll back to the bottom on keypress
-urxvt*scrollTtyKeypress: true
+URxvt*scrollTtyKeypress: true
 
 ! Disable the scrollbar
-urxvt*scrollBar: false
+URxvt*scrollBar: false
 
 ! Disable saving lines in the scrollback buffer
-urxvt*saveLines: 1000
+URxvt*saveLines: 1000
 
 ! Set the name for the TERM variable
-urxvt*termName: screen-256color
+URxvt*termName: screen-256color
 
 ! Set transparency
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
 
 ! Dynamic colors
-urxvt*dynamicColors: on
+URxvt*dynamicColors: on
 
 ! Disable the internal border
-urxvt*internalBorder: 0
+URxvt*internalBorder: 0
 
 ! Disable the bell sound
-! urxvt*visualBell: true
+! URxvt*visualBell: true

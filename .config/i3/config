@@ -203,11 +203,11 @@ mode "$mode_media"{
 
 
 #--------------------Gaps Mode--------------------
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 smart_gaps on
-#smart_gaps inverse_outer
 smart_borders on
-smart_borders no_gaps
+#smart_gaps inverse_outer
+#smart_borders no_gaps
 
 gaps inner 10
 gaps outer 0
