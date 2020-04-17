@@ -15,6 +15,15 @@ alias gd="git diff"
 alias gps="git push"
 alias gpl="git pull"
 
+#Python virtual envoirnment
+alias global_pyenv="source ~/venv/bin/activate"
+
+#Local python virtual envoirnment
+alias pyenv="source .pyenv/bin/activate"
+alias pyenv_new="python -m venv .pyenv"
+alias pyenv_dump="pip freeze > requirements.txt"
+alias pyenv_install="pip install -r requirements.txt"
+
 #Pass
 alias passcopy="pass -c"
 
@@ -28,7 +37,20 @@ alias editor='f(){~/.scripts/i3/editor/editor.sh $@; unset -f f; exit}; f'
 
 #School
 alias stage='cd ~/projects/school/stage'
-alias stagelog='vim ~/projects/school/stage/log/files/`date -dlast-monday +%d-%m-%Y`'
+alias school-'cd ~/projects/school/'
+alias tinlab='cd ~/projects/school/tinlab_es'
+alias project='cd ~/projects/school/tinlab_es/project/drone-positioning'
+alias workshops='cd ~/projects/school/tinlab_es/workshops/hr-es/'
+
+#School compiler stuff
+alias ccbuild='cd Debug; /opt/ccstudio/ccs/utils/bin/gmake -k -j 8 all -O; cd ..'
+
+
+#Curl tools
+alias weather="curl 'wttr.in?u'"
+alias cheat='f(){curl "cheat.sh/$1"; unset -f f}; f'
+alias qr='f(){curl "qrenco.de/$1"; unset -f f}; f'
+alias dict='f(){curl "dict://dict.org/d:$1" | less; unset -f f}; f'
 
 #Misc
 alias q='exit'
@@ -36,8 +58,9 @@ alias q='exit'
 alias dotfiles='cd ~/projects/private/dotfiles/'
 alias wifi='sudo wifi-menu'
 
+alias fah='tail -10 /opt/fah/log.txt'
+
 alias mountusb='mount /dev/sdb'
 alias unmountusb='umount /dev/sdb'
 
 alias please='sudo'
-alias weather="curl 'wttr.in/Rotterdam?u'"

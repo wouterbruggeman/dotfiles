@@ -3,7 +3,7 @@
 WS=$1
 if [ -z "$WS" ]
 then
-	WS=1
+	WS="1 "
 fi
 
 WS_PATH="$HOME/.config/i3/layouts/ws_$WS"

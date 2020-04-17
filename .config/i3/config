@@ -1,22 +1,50 @@
+#--------------------Color variables--------------------
+set_from_resource $color_background i3wm.background #000000
+set_from_resource $color_foreground i3wm.foreground #ffffff
+set_from_resource $color_border i3wm.color0 #ffffff
+
+set_from_resource $color_alert i3wm.color1 #ff0000
+set_from_resource $color_separator i3wm.color0 #11000
+
+set_from_resource $color_primary i3wm.color4 #0000ff
+set_from_resource $color_primary2 i3wm.color12 #0000ff
+
+set_from_resource $color_secondary i3wm.color2 #00ff00
+set_from_resource $color_secondary2 i3wm.color10 #00ff00
+
+
+
+
+
+
+
+
+
 #--------------------Other settings--------------------
-set $mod Mod4
-font DejaVu Sans Mono 14
 
 # Workspace variables
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
+set $ws1 "1 "
+set $ws2 "2 龜"
+set $ws3 "3 "
+set $ws4 "4 "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9 "
+set $ws10 "10 "
 
+
+# I3 variables
+set $mod Mod4
 set $lock "sh -c '~/.scripts/lock.sh'"
 set $terminal i3-sensible-terminal
+
+# Rofi variables
 set $rofi_theme arc-dark
+
+# Font
+font pango:DejaVu Sans 10
 
 
 
@@ -141,9 +169,10 @@ bindsym XF86AudioMute exec --no-startup-id "sh -c '~/.scripts/sound/toggleMute.s
 
 # Screenshot binding
 bindcode 107 exec --no-startup-id scrot ~/media/screenshots/%d-%m-%Y-%T-screenshot.png
+bindsym --release $mod+z exec scrot -s ~/media/screenshots/%d-%m-%Y-%T-screenshot.png
 
 #Toggle bar
-bindsym $mod+Shift+b exec --no-startup-id "sh -c '~/.scripts/polybar/toggleBar.sh'"
+#bindsym $mod+Shift+b exec --no-startup-id "sh -c '~/.scripts/polybar/toggleBar.sh'"
 
 #Lock
 bindsym $mod+i exec --no-startup-id $lock
@@ -244,30 +273,77 @@ bindsym $mod+r mode "$mode_resize"
 set $mode_resize [Resize]: (H) Shrink width, (J) Grow height, (K) Shrink height, (L) Grow width
 mode "$mode_resize" {
 	#Resize with hjkl
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 	
 	#Resize with arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 	
 	#Back to normal
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 
 
+#--------------------Window specific configurations--------------------
+#for_window [title="pygame"] floating disable
+
+for_window [class="Matplotlib"] floating enable
+
+#Workspace 2: Internet
+for_window [class="firefox"] move to workspace $ws2
+
+#Workspace 3: Other applications
+for_window [title="pygame"] move to workspace $ws3
+for_window [class="Mail"] move to workspace $ws3
+
+#Workspace 4: Thunar
+for_window [class="Thunar"] move to workspace $ws4
+
+#Workspace 9: social and multimedia
+for_window [class="Microsoft Teams - Preview"] move to workspace $ws9
+for_window [class="Telegram"] move to workspace $ws9
+for_window [class="discord"] move to workspace $ws9
+
+#Workspace 10: Music
+for_window [class="Spotify"] move to workspace $ws10 
+
+
+
+
+#--------------------Bar--------------------
+bar {
+	#status_command i3status
+	#output primary
+	status_command i3blocks 
+	position top
+	tray_output primary
+	#tray_padding -50
+	font pango:DejaVu Sans 10, FontAwesome 10
+
+	colors {
+		background $color_background
+		statusline $color_foreground
+		separator $color_separator
+
+		focused_workspace   $color_border $color_secondary $color_foreground
+		active_workspace	$color_border $color_primary $color_foreground
+		inactive_workspace	$color_border $color_background $color_foreground
+		urgent_workspace    $color_border $color_alert $color_foreground 
+		binding_mode        $color_border $color_background $color_foreground
+	}
+}
+
+
+
+
 #--------------------UNUSED--------------------
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-        #status_command i3status
-#}
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed

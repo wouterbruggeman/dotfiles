@@ -11,7 +11,7 @@ RANGER_COMMAND="ranger;"
 #Change the workspace
 if [ -z "$WS" ]
 then
-	WS=1
+	WS="1 "
 fi
 
 #Change directory into the desired folder
