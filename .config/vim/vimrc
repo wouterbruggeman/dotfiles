@@ -3,21 +3,29 @@ set packpath^=$XDG_CONFIG_HOME/vim
 set rtp^=$XDG_CONFIG_HOME/vim
 set viminfo+=n$XDG_CACHE_HOME/vim/vim_info
 
+
+
 " Search settings
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
 
+
+
 " Colors
 highlight Normal ctermbg=black
 highlight Constant ctermfg=3
+
+
 
 " Indentation
 set autoindent
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+
+
 
 " Code settings
 syntax enable
@@ -28,10 +36,15 @@ set lbr
 set tw=160
 set mouse=a
 
+
+
 " Keybindings
 nnoremap <F2> :buffers<CR>:buffer<Space>
 nnoremap <F3> :b#<Enter>
 nnoremap <F4> :Explore<Enter>
+
+" Remove search highlight
+nnoremap <leader><space> :nohlsearch<CR> 
 
 " Split keybindings
 nnoremap <C-J> <C-W><C-J>
@@ -39,32 +52,56 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+
+" Buffers
+" Next buffer
+map <leader>n :bn<cr>
+
+" Previous buffer
+map <leader>p :bp<cr>
+
+" Delete buffer
+map <leader>d :bd<cr>  
+
+
+
+
+
 " Split settings
 set splitbelow
 set splitright
 
+
+
 " Clipboard etc
 set clipboard=unnamedplus
 
+
+
 " Spell checkerset spelllang=en_us,nl
 set spelllang=en_us,nl
+
+
 
 " Explorer settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
-" Remove search highlight
-nnoremap <leader><space> :nohlsearch<CR> 
 
-" Plugin Manager
+
+
+
+" Call the plugin manager
 call plug#begin('$XDG_CONFIG_HOME/vim/plugins')
 
-" Plugins
+" Plugin list
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
-
-" Start the plugin manager
+Plug 'airblade/vim-gitgutter'
+" Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'lepture/vim-jinja'
 call plug#end()
 
 " Lightline configuration
@@ -75,3 +112,24 @@ let g:lightline = {}
 " Vimtex configuration
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
+
+
+
+" Git Gutter configuration
+"
+" Fix the color of the signcolumn
+highlight! link SignColumn LineNr
+
+" Always display the signcolumn
+set signcolumn=yes
+
+" Change the colors of the signs
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+
+
+
+
+" Jinja configuration
+au BufNewFile,BufRead *.jinja,*.jinja2 set ft=jinja

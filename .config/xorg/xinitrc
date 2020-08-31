@@ -5,22 +5,16 @@ xrdb $XDG_CONFIG_HOME/xorg/Xresources
 exec ~/.scripts/background.sh &
 
 #Set a default volume level
-amixer set Master 20%
+amixer set Master 25% 
 
 #Start picom 
-picom -c -b
-
-#Show polybar
-exec polybar main &
+picom -b &
 
 #Start xautolock
 xautolock -locker ~/.scripts/lock.sh -time 10 -detectsleep &
 
 #Enable numlock
 numlockx &
-
-#Attempt to connect to all bluetooth devices 
-exec ~/.scripts/bluetooth.sh &
 
 #Set the default profile
 exec ~/.scripts/profiles/laptop.sh &

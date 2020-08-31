@@ -24,7 +24,7 @@ set_from_resource $color_secondary2 i3wm.color10 #00ff00
 
 # Workspace variables
 set $ws1 "1 "
-set $ws2 "2 龜"
+set $ws2 "2 " 
 set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5"
@@ -161,9 +161,9 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # Sound keybindings
-bindsym XF86AudioRaiseVolume exec amixer set Master 1%+
-bindsym XF86AudioLowerVolume exec amixer set Master 1%-
-bindsym XF86AudioMute exec --no-startup-id "sh -c '~/.scripts/sound/toggleMute.sh'"
+bindsym XF86AudioRaiseVolume exec pulsemixer --change-volume +1 --max-volume 100
+bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -1 --max-volume 100
+bindsym XF86AudioMute exec pulsemixer --toggle-mute
 
 #--------------------OTHER KEYBINDINGS--------------------
 
@@ -199,7 +199,7 @@ mode "$mode_system"{
 #--------------------PROFILE MODE--------------------
 bindsym $mod+p mode "$mode_profile"
 
-set $mode_profile [Profile]: (1) Laptop, (2) Home (3) Work
+set $mode_profile [Profile]: (1) Laptop, (2) Home, (3) Work
 mode "$mode_profile"{
 	bindsym 1 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh laptop'", mode "default"
 	bindsym 2 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh home'", mode "default"

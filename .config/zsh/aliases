@@ -36,11 +36,12 @@ alias vopen='vim --servername DEFAULT --remote-silent'
 alias editor='f(){~/.scripts/i3/editor/editor.sh $@; unset -f f; exit}; f'
 
 #School
-alias stage='cd ~/projects/school/stage'
+#alias stage='cd ~/projects/school/stage'
 alias school-'cd ~/projects/school/'
-alias tinlab='cd ~/projects/school/tinlab_es'
+#alias tinlab='cd ~/projects/school/tinlab_es'
+alias tinlab='cd ~/projects/school/tinlab_ml'
 alias project='cd ~/projects/school/tinlab_es/project/drone-positioning'
-alias workshops='cd ~/projects/school/tinlab_es/workshops/hr-es/'
+#alias workshops='cd ~/projects/school/tinlab_es/workshops/hr-es/'
 
 #School compiler stuff
 alias ccbuild='cd Debug; /opt/ccstudio/ccs/utils/bin/gmake -k -j 8 all -O; cd ..'
@@ -57,6 +58,7 @@ alias q='exit'
 
 alias dotfiles='cd ~/projects/private/dotfiles/'
 alias wifi='sudo wifi-menu'
+alias sound='pulsemixer'
 
 alias fah='tail -10 /opt/fah/log.txt'
 

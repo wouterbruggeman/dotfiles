@@ -3,8 +3,6 @@
 # Icons
 ICON_PAUSED=""
 ICON_PLAYING=""
-ICON_ST
-
 
 
 # Commands

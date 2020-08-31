@@ -37,7 +37,8 @@ cp /etc/mkinitcpio.conf $DOT_DIR/etc/mkinitcpio.conf
 cp /etc/fstab $DOT_DIR/etc/fstab
 cp /etc/iptables/iptables.rules $DOT_DIR/etc/iptables/iptables.rules
 cp -r /etc/modprobe.d $DOT_DIR/etc/
-cp -r /etc/X11/xorg.conf.d $DOT_DIR/etc/
+cp -r /etc/X11/xorg.conf.d $DOT_DIR/etc/X11/
+cp -r /etc/bumblebee $DOT_DIR/etc/
 cp /etc/systemd/logind.conf $DOT_DIR/etc/systemd/logind.conf
 cp /etc/pacman.conf $DOT_DIR/etc/pacman.conf
 

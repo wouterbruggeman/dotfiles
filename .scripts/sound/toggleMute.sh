@@ -1,9 +1,10 @@
 #!/bin/sh
 
-CURRENT_STATE=`amixer get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]'`
+CURRENT_STATE=`pulsemixer --get-mute`
 
-if [[ $CURRENT_STATE == '[on]' ]]; then
-	amixer set Master mute
+
+if [[ $CURRENT_STATE == 0 ]]; then
+	pulsemixer --mute
 	playerctl pause
 else
 	amixer set Master unmute
