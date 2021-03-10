@@ -14,15 +14,18 @@ alias ga="git add *"
 alias gd="git diff"
 alias gps="git push"
 alias gpl="git pull"
+alias gl="git log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s'"
 
-#Python virtual envoirnment
-alias global_pyenv="source ~/venv/bin/activate"
 
-#Local python virtual envoirnment
-alias pyenv="source .pyenv/bin/activate"
-alias pyenv_new="python -m venv .pyenv"
-alias pyenv_dump="pip freeze > requirements.txt"
-alias pyenv_install="pip install -r requirements.txt"
+##Python virtual envoirnment
+#alias global_pyenv="source ~/venv/bin/activate"
+#
+##Local python virtual envoirnment
+#alias pyenv="source .pyenv/bin/activate"
+#alias pyenv_new="python -m venv .pyenv"
+#alias pyenv_init="pyenv_new; pyenv; pip install --upgrade pip"
+#alias pyenv_dump="pip freeze > requirements.txt"
+#alias pyenv_install="pip install -r requirements.txt"
 
 #Pass
 alias passcopy="pass -c"
@@ -36,16 +39,9 @@ alias vopen='vim --servername DEFAULT --remote-silent'
 alias editor='f(){~/.scripts/i3/editor/editor.sh $@; unset -f f; exit}; f'
 
 #School
-#alias stage='cd ~/projects/school/stage'
-alias school-'cd ~/projects/school/'
-#alias tinlab='cd ~/projects/school/tinlab_es'
-alias tinlab='cd ~/projects/school/tinlab_ml'
-alias project='cd ~/projects/school/tinlab_es/project/drone-positioning'
-#alias workshops='cd ~/projects/school/tinlab_es/workshops/hr-es/'
-
-#School compiler stuff
-alias ccbuild='cd Debug; /opt/ccstudio/ccs/utils/bin/gmake -k -j 8 all -O; cd ..'
-
+alias stage='cd ~/projects/school/afstuderen2021'
+alias school='cd ~/projects/school/'
+alias thesis='cd ~/projects/school/afstuderen2021/thesis/'
 
 #Curl tools
 alias weather="curl 'wttr.in?u'"
@@ -54,15 +50,23 @@ alias qr='f(){curl "qrenco.de/$1"; unset -f f}; f'
 alias dict='f(){curl "dict://dict.org/d:$1" | less; unset -f f}; f'
 
 #Misc
-alias q='exit'
-
+#Directories
 alias dotfiles='cd ~/projects/private/dotfiles/'
+alias templates='cd ~/documents/templates/'
+alias latex_article_init='cp -r ~/documents/templates/latex/article/* .'
+
+#Misc applications
+alias q='exit'
+alias please='sudo'
+
 alias wifi='sudo wifi-menu'
 alias sound='pulsemixer'
-
-alias fah='tail -10 /opt/fah/log.txt'
 
 alias mountusb='mount /dev/sdb'
 alias unmountusb='umount /dev/sdb'
 
-alias please='sudo'
+alias solid_terminal='urxvt -bg #222222 &; disown'
+alias terminal='urxvt &; disown'
+alias term='urxvt &; disown'
+
+alias diskspace='cd /; ncdu'

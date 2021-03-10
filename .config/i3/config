@@ -170,6 +170,7 @@ bindsym XF86AudioMute exec pulsemixer --toggle-mute
 # Screenshot binding
 bindcode 107 exec --no-startup-id scrot ~/media/screenshots/%d-%m-%Y-%T-screenshot.png
 bindsym --release $mod+z exec scrot -s ~/media/screenshots/%d-%m-%Y-%T-screenshot.png
+bindsym $mod+x exec --no-startup-id "sh -c '~/.scripts/background.sh'"
 
 #Toggle bar
 #bindsym $mod+Shift+b exec --no-startup-id "sh -c '~/.scripts/polybar/toggleBar.sh'"
@@ -199,11 +200,12 @@ mode "$mode_system"{
 #--------------------PROFILE MODE--------------------
 bindsym $mod+p mode "$mode_profile"
 
-set $mode_profile [Profile]: (1) Laptop, (2) Home, (3) Work
+set $mode_profile [Profile]: (1) Laptop, (2) Home, (3) Work, (4) 4:3 Monitor
 mode "$mode_profile"{
 	bindsym 1 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh laptop'", mode "default"
 	bindsym 2 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh home'", mode "default"
 	bindsym 3 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh work'", mode "default"
+	bindsym 4 exec --no-startup-id "sh -c '~/.scripts/profiles/setProfile.sh 4_3_monitor'", mode "default"
 
 	# Back to normal
 	bindsym Return mode "default"
@@ -302,12 +304,19 @@ for_window [class="firefox"] move to workspace $ws2
 #Workspace 3: Other applications
 for_window [title="pygame"] move to workspace $ws3
 for_window [class="Mail"] move to workspace $ws3
+for_window [class="Thunderbird"] move to workspace $ws3
 
 #Workspace 4: Thunar
 for_window [class="Thunar"] move to workspace $ws4
 
 #Workspace 9: social and multimedia
+#MS Teams
 for_window [class="Microsoft Teams - Preview"] move to workspace $ws9
+for_window [title="Loading Microsoft Teams"] move to workspace $ws9
+for_window [title="Microsoft Teams Notification" class="microsoft teams - preview"] floating enable
+for_window [title="Microsoft Teams Notification" class="Microsoft Teams - Preview"] floating enable
+
+#Others
 for_window [class="Telegram"] move to workspace $ws9
 for_window [class="discord"] move to workspace $ws9
 

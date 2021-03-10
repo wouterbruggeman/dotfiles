@@ -6,6 +6,8 @@ if [[ $PROFILE_NAME == 'laptop' ]]; then
 	echo ""
 elif [[ $PROFILE_NAME == 'home' ]]; then
 	echo ""
+elif [[ $PROFILE_NAME == '4_3_monitor' ]]; then
+	echo ""
 elif [[ $PROFILE_NAME == 'work' ]]; then
 	echo ""
 fi

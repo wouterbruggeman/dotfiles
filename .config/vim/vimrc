@@ -72,15 +72,16 @@ map <leader>d :bd<cr>
 set splitbelow
 set splitright
 
-
-
 " Clipboard etc
 set clipboard=unnamedplus
 
+" Change directory
+set autochdir
 
 
 " Spell checkerset spelllang=en_us,nl
-set spelllang=en_us,nl
+"set spelllang=en_us,nl
+set spelllang=en_us
 
 
 
@@ -100,8 +101,9 @@ call plug#begin('$XDG_CONFIG_HOME/vim/plugins')
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
-" Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'lepture/vim-jinja'
+Plug 'Cognoscan/vim-vhdl'
+
 call plug#end()
 
 " Lightline configuration

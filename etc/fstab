@@ -19,3 +19,6 @@ UUID=0f65240b-df4d-4913-a049-e4e168d80147	none      	swap      	defaults  	0 0
 
 # /dev/mmcblk0 -- SDcard 
 /dev/mmcblk0 /mnt/sd vfat user,uid=1000,gid=1000,umask=000,utf8,noauto 0 0
+
+# /dev/sda1 --HDD
+/dev/sda2 /mnt/hdd ext4 rw,relatime 0 0

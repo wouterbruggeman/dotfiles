@@ -36,6 +36,7 @@
 *.color15:      #e2e2e2
 
 ! Font
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
 URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
 
 ! Secondary screen (like less) settings

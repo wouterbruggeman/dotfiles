@@ -15,3 +15,5 @@ $(~/.scripts/profiles/$PROFILE.sh)
 
 # Pick a random background
 $(~/.scripts/background.sh)
+
+$(xrandr)

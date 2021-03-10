@@ -30,3 +30,7 @@ fi
 if [ -d "Downloads" ]; then
 	rm -rf ~/Downloads
 fi
+
+#Pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
