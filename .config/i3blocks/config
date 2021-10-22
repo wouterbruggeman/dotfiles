@@ -1,0 +1,46 @@
+# Global properties
+separator=true
+separator_block_width=15
+interval=5
+
+[music]
+command=~/.scripts/bar/music.sh
+interval=1
+
+[weather]
+command=~/.scripts/bar/weather.sh
+interval=3600
+
+[wifi]
+command=~/.scripts/bar/wifi.sh
+
+[ethernet]
+command=~/.scripts/bar/ethernet.sh
+
+[sound]
+command=~/.scripts/bar/volume.sh
+interval=1
+
+[backlight]
+command=~/.scripts/bar/backlight.sh
+
+[date]
+label= 
+command=date '+%d-%m-%Y'
+
+[time]
+label= 
+command=date '+%H:%M:%S'
+interval=1
+
+[battery]
+command=~/.scripts/bar/battery.sh
+
+[profile]
+command=~/.scripts/bar/profile.sh
+
+
+#TODO:
+#[cpu]
+#[memory]
+#[temperature]
